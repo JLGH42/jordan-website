@@ -12,9 +12,11 @@ app.use(express.static(publicPath))
 app.set('views', viewsPath);
 app.set('view engine', 'ejs');
 
-app.get("/", (req, res) => {
-    res.render('index');
-});
+//routes
+const routes = {
+    landing: require('./routers/landing')
+}
+app.use(routes.landing);
 
 const port = process.env.PORT;
 app.listen(port, () => {
