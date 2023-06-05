@@ -109,6 +109,8 @@ main {
 
 .dynamic-text li span {
   position: relative;
+  display: contents;
+  height: 90px;
 }
 
 .dynamic-text li span::after {
@@ -125,7 +127,7 @@ main {
 @keyframes typing {
   100% {
     left: 100%;
-    margin: 0 -32px 0 32px;
+    margin: 0 -35px 0 35px;
   }
 }
 
