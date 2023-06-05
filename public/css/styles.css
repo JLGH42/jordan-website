@@ -115,7 +115,7 @@ main {
 
 .dynamic-text li span::after {
   content: "";
-  background: #000;
+  background: #0000005d;
   position: absolute;
   left: 0;
   height: 100%;
