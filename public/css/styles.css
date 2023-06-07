@@ -36,12 +36,12 @@ body {
   font-size: 2rem;
   place-items: center;
   transform: rotateY(45deg);
-  animation: rotateAnimation 2s linear infinite;
+  animation: rotateAnimation 3s linear infinite;
 }
 
 @keyframes rotateAnimation {
   from {
-    transform: rotateY(45deg);
+    transform: rotateY(0deg);
   }
   to {
     transform: rotateY(360deg);
@@ -133,6 +133,6 @@ main {
 
 @keyframes slide {
   100% {
-    top: -260px;
+    top: -270px;
   }
 }
