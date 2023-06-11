@@ -40,6 +40,11 @@ body {
   animation: rotateAnimation 3s linear infinite;
 }
 
+.logo a {
+  text-decoration: none;
+  color: var(--primary-100);
+}
+
 @keyframes rotateAnimation {
   from {
     transform: rotateY(0deg);
@@ -119,16 +124,16 @@ main {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  border: var(--primary-border);
+  /* border: var(--primary-border); */
   border-radius: 15%;
-  padding: .6rem;
-  background: rgb(105, 204, 51, .1);
+  padding: 0.6rem;
+  background: rgb(105, 204, 51, 0.2);
 }
 
 .hero-link .text {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 150;
-    text-shadow: 0 0 0 #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 150;
+  text-shadow: 0 0 0 #000;
 }
 
 .hero-container {
