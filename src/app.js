@@ -14,9 +14,11 @@ app.set('view engine', 'ejs');
 
 //routes
 const routes = {
-    landing: require('./routers/landing')
+    home: require('./routers/home'),
+    profile: require('./routers/profile')
 }
-app.use(routes.landing);
+app.use(routes.home);
+app.use(routes.profile);
 
 const port = process.env.PORT;
 app.listen(port, () => {
