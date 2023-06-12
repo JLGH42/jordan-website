@@ -199,6 +199,7 @@ main {
   flex-basis: content;
   justify-content: center;
   align-items: center;
+  margin-top: 2.5rem;
 }
 
 .container .profile-wrapper {
@@ -215,4 +216,68 @@ main {
   width: auto;
   height: 100%;
   margin-left: -100px;
+}
+
+.container h1 {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.container .content {
+  margin: 0 auto;
+  max-width: 650px;
+  color: #fff;
+}
+
+.container .content p {
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.container .tl-dr.grid-container {
+  grid-template-rows: 10vh;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 0.6fr);
+  place-items: start center;
+  border: var(--primary-border);
+  gap: 0 20px;
+  min-width: 100%;
+  padding: 0.2rem;
+}
+
+.container .tl-dr.grid-container h3 {
+  grid-area: 1/1/3/4;
+  font-size: 2rem;
+}
+
+.container .tl-dr.grid-container > div {
+  display: grid;
+  place-items: center;
+  margin-top: 2.5rem;
+}
+
+.container .tl-dr.grid-container > div > h5 {
+  text-transform: capitalize;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+.container .tl-dr.grid-container > div > i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.container .tl-dr.grid-container .tldr-man-1 {
+  grid-area: 2/1/3/2;
+}
+
+.container .tl-dr.grid-container .tldr-man-2 {
+  grid-area: 2/2/3/3;
+}
+
+.container .tl-dr.grid-container .tldr-man-3 {
+  grid-area: 2/3/3/4;
 }
