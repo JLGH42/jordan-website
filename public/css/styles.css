@@ -29,19 +29,48 @@ body {
   font-weight: 400;
   width: fit-content;
   padding: 0.6em;
-  border: var(--primary-border);
+  border: 2px solid #fff;
   border-radius: 75%;
   box-sizing: border-box;
   font-size: 2rem;
   place-items: center;
   transform: rotateY(45deg);
   animation: rotateAnimation 3s linear infinite;
-  background: rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
 }
 
 .logo a {
   text-decoration: none;
+  color: #fff;
+}
+
+.main-header.sticky .logo {
+  border: var(--primary-border);
+}
+
+.main-header.sticky .logo a {
   color: var(--primary-100);
+}
+
+.main-header.sticky .logo,
+.main-header.sticky .logo a {
+  color: var(--primary-100);
+}
+
+.logo a.purple-neon {
+  color: rgb(214 157 205);
+}
+
+.main-header.sticky .logo:has(> .purple-neon) {
+  border: 2px solid rgb(214 157 205);
+}
+.main-header.sticky .logo a:has(> .purple-neon) {
+  color: rgb(214 157 205);
+  border: 2px solid rgb(214 157 205);
+}
+
+.main-header.sticky .logo a.purple-neon {
+  color: rgb(214 157 205);
 }
 
 @keyframes rotateAnimation {
@@ -72,6 +101,10 @@ body {
   color: var(--primary-100);
 }
 
+.main-header.sticky .navigation a.purple-neon {
+  color: rgb(214 157 205);
+}
+
 .main-header.sticky .navigation a:hover {
   color: #fff;
 }
@@ -86,11 +119,16 @@ nav.navigation a {
   text-decoration: none;
   margin: 1rem;
   font-size: 1.1rem;
+  transition: 1s;
 }
 
 nav.navigation a:hover {
   color: var(--primary-100);
   width: 100%;
+}
+
+nav.navigation > a.purple-neon {
+  color: rgb(214 157 205);
 }
 
 /* typewriter hero banner */
@@ -287,7 +325,7 @@ main {
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
-  background-image: url('/images/parallax.jpg');
+  background-image: url("/images/parallax.jpg");
   background-position: center;
   background-size: cover;
   min-height: 50vh;
@@ -297,12 +335,14 @@ main {
   margin: 10vh;
 }
 
-.parallax-section h1, p {
+.parallax-section h1 {
   text-transform: capitalize;
   color: #fff;
   text-shadow: 1px 1px 10px rgb(214 157 205);
+  font-size: 4.75rem;
 }
 
-.parallax-section h1 {
-  font-size: 4.75rem;
+#purpose-section {
+  color: rgb(214 157 205);
+  text-shadow: 1px 1px 10px rgb(214 157 205);
 }
