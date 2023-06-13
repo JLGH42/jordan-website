@@ -24,8 +24,6 @@ body {
   display: grid;
 }
 
-/* header */
-
 .logo {
   font-family: "Rubik Puddles", sans-serif;
   font-weight: 400;
@@ -107,10 +105,11 @@ main {
   border-radius: 10px;
 }
 
-.banner {
+.parallax-banner {
   display: block;
   background: url("/images/hero-background.jpeg");
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -280,4 +279,30 @@ main {
 
 .container .tl-dr.grid-container .tldr-man-3 {
   grid-area: 2/3/3/4;
+}
+
+.parallax-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url('/images/parallax.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+  width: 100%;
+  row-gap: 4rem;
+  text-align: center;
+  margin: 10vh;
+}
+
+.parallax-section h1, p {
+  text-transform: capitalize;
+  color: #fff;
+  text-shadow: 1px 1px 10px rgb(214 157 205);
+}
+
+.parallax-section h1 {
+  font-size: 4.75rem;
 }
