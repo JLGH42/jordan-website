@@ -9,7 +9,9 @@
   --green: rgb(105, 204, 51);
   --green-border: 2px solid var(--green);
   --pink-neon: rgb(214 157 205);
-  --pink-neon-border: 2px solid rgb(214 157 205);
+  --pink-neon-border: 2px solid var(--pink-neon);
+  --golden-orange: rgb(212 146 21);
+  --golden-orange-border: 2px solid var(--golden-orange);
 }
 
 body {
@@ -65,29 +67,26 @@ body {
   border: var(--green-border);
 }
 
-.main-header.sticky .logo a {
-  color: var(--green);
-}
-
 .main-header.sticky .logo,
 .main-header.sticky .logo a {
   color: var(--green);
 }
 
-.logo a.pink-neon {
-  color: var(--pink-neon);
-}
-
 .main-header.sticky .logo:has(> .pink-neon) {
-  border: 2px solid var(--pink-neon);
-}
-.main-header.sticky .logo a:has(> .pink-neon) {
-  color: var(--pink-neon);
   border: 2px solid var(--pink-neon);
 }
 
 .main-header.sticky .logo a.pink-neon {
   color: var(--pink-neon);
+}
+
+.main-header.sticky .logo:has(> .golden-orange) {
+  border: 2px solid var(--golden-orange);
+}
+
+.main-header.sticky .logo a.golden-orange {
+  color: var(--golden-orange);
+  text-shadow: 1px 1px 10px var(--golden-orange);
 }
 
 @keyframes rotateAnimation {
@@ -120,6 +119,10 @@ body {
 
 .main-header.sticky .navigation a.pink-neon {
   color: var(--pink-neon);
+}
+
+.main-header.sticky .navigation a.golden-orange {
+  color: var(--golden-orange);
 }
 
 .main-header.sticky .navigation a:hover {
@@ -275,6 +278,7 @@ main {
   color: #fff;
   font-size: 3em;
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 .container .content {
@@ -398,16 +402,53 @@ main {
 }
 
 #purpose-section article.vert-card > i:hover {
-  transform: rotateZ(720deg)
+  transform: rotateZ(720deg);
 }
 
-.parallax-section~.parallax-section {
-  background-image: url('/images/parallax-2.jpg');
+.parallax-section ~ .parallax-section {
+  background-image: url("/images/parallax-3.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.parallax-section~.parallax-section h1:after {
-  content: "Experience"
+.parallax-section ~ .parallax-section h1:after {
+  content: "Experience";
+  text-shadow: 1px 1px 10px var(--golden-orange);
+}
+
+#experience-section.container {
+  color: #fff;
+  text-shadow: 1px 1px 10px var(--golden-orange);
+  text-align: center;
+}
+
+#experience-section .content {
+  margin: 2rem auto;
+}
+
+.tech {
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: auto;
+  border: var(--golden-orange-border);
+  width: 90vw;
+  place-items: center;
+}
+.tech img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.tech h2 {
+  font-size: 1.5rem;
+}
+
+.tech .icons {
+  grid-area: 2/1/3/2;
+  font-size: 4rem;
+}
+
+.tech .company {
+  grid-area: 3/2/2/4;
 }
