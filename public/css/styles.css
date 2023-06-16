@@ -6,8 +6,8 @@
 /* responsive styles */
 
 :root {
-  --primary-100: rgb(105, 204, 51);
-  --primary-border: 2px solid var(--primary-100);
+  --green: rgb(105, 204, 51);
+  --green-border: 2px solid var(--green);
   --pink-neon: rgb(214 157 205);
   --pink-neon-border: 2px solid rgb(214 157 205);
 }
@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background: #000;
-  color: var(--primary-100);
+  color: var(--green);
   text-shadow: 1px 1px 10px #679e61;
   font-family: "Space Grotesk", sans-serif;
   height: 100%;
@@ -62,16 +62,16 @@ body {
 }
 
 .main-header.sticky .logo {
-  border: var(--primary-border);
+  border: var(--green-border);
 }
 
 .main-header.sticky .logo a {
-  color: var(--primary-100);
+  color: var(--green);
 }
 
 .main-header.sticky .logo,
 .main-header.sticky .logo a {
-  color: var(--primary-100);
+  color: var(--green);
 }
 
 .logo a.pink-neon {
@@ -115,7 +115,7 @@ body {
 }
 
 .main-header.sticky .navigation a {
-  color: var(--primary-100);
+  color: var(--green);
 }
 
 .main-header.sticky .navigation a.pink-neon {
@@ -140,7 +140,7 @@ nav.navigation a {
 }
 
 nav.navigation a:hover {
-  color: var(--primary-100);
+  color: var(--green);
   width: 100%;
 }
 
@@ -228,7 +228,7 @@ main {
   left: 0;
   height: 100%;
   width: 100%;
-  border-left: var(--primary-border);
+  border-left: var(--green-border);
   animation: typing 2s steps(11) infinite;
 }
 
@@ -294,7 +294,7 @@ main {
   grid-auto-rows: auto;
   grid-template-columns: repeat(3, 0.6fr);
   place-items: start center;
-  border: var(--primary-border);
+  border: var(--green-border);
   gap: 0 20px;
   min-width: 100%;
   padding: 0.2rem;
