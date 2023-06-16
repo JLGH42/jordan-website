@@ -269,8 +269,9 @@ main {
 }
 
 .container .content p {
-  line-height: 20px;
+  line-height: 1.7;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .container .tl-dr.grid-container {
