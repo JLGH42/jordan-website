@@ -8,6 +8,8 @@
 :root {
   --primary-100: rgb(105, 204, 51);
   --primary-border: 2px solid var(--primary-100);
+  --pink-neon: rgb(214 157 205);
+  --pink-neon-border: 2px solid rgb(214 157 205);
 }
 
 body {
@@ -22,6 +24,21 @@ body {
 
 .grid-container {
   display: grid;
+}
+
+.vert-cards {
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-auto-rows: auto;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0;
+  gap: 0 20px;
+}
+
+.vert-card {
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .logo {
@@ -57,20 +74,20 @@ body {
   color: var(--primary-100);
 }
 
-.logo a.purple-neon {
-  color: rgb(214 157 205);
+.logo a.pink-neon {
+  color: var(--pink-neon);
 }
 
-.main-header.sticky .logo:has(> .purple-neon) {
-  border: 2px solid rgb(214 157 205);
+.main-header.sticky .logo:has(> .pink-neon) {
+  border: 2px solid var(--pink-neon);
 }
-.main-header.sticky .logo a:has(> .purple-neon) {
-  color: rgb(214 157 205);
-  border: 2px solid rgb(214 157 205);
+.main-header.sticky .logo a:has(> .pink-neon) {
+  color: var(--pink-neon);
+  border: 2px solid var(--pink-neon);
 }
 
-.main-header.sticky .logo a.purple-neon {
-  color: rgb(214 157 205);
+.main-header.sticky .logo a.pink-neon {
+  color: var(--pink-neon);
 }
 
 @keyframes rotateAnimation {
@@ -101,8 +118,8 @@ body {
   color: var(--primary-100);
 }
 
-.main-header.sticky .navigation a.purple-neon {
-  color: rgb(214 157 205);
+.main-header.sticky .navigation a.pink-neon {
+  color: var(--pink-neon);
 }
 
 .main-header.sticky .navigation a:hover {
@@ -127,11 +144,9 @@ nav.navigation a:hover {
   width: 100%;
 }
 
-nav.navigation > a.purple-neon {
-  color: rgb(214 157 205);
+nav.navigation > a.pink-neon {
+  color: var(--pink-neon);
 }
-
-/* typewriter hero banner */
 
 main {
   display: flex;
@@ -339,11 +354,45 @@ main {
 .parallax-section h1 {
   text-transform: capitalize;
   color: #fff;
-  text-shadow: 1px 1px 10px rgb(214 157 205);
+  text-shadow: 1px 1px 10px var(--pink-neon);
   font-size: 4.75rem;
 }
 
 #purpose-section {
-  color: rgb(214 157 205);
-  text-shadow: 1px 1px 10px rgb(214 157 205);
+  color: #fff;
+  text-shadow: 1px 1px 10px var(--pink-neon);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#purpose-section h1 {
+  text-transform: capitalize;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+#purpose-section .vert-cards {
+  margin-top: 2rem;
+}
+
+#purpose-section article.vert-card {
+  padding: 1.5rem;
+}
+
+#purpose-section article.vert-card > h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+#purpose-section article.vert-card > i {
+  font-size: 2.5rem;
+  background: var(--pink-neon);
+  border-radius: 50%;
+  padding: 2rem;
+  transition: 1.2s ease;
+}
+
+#purpose-section article.vert-card > i:hover {
+  transform: rotateZ(720deg)
 }
