@@ -395,10 +395,12 @@ main {
 
 #purpose-section article.vert-card > i {
   font-size: 2.5rem;
-  background: var(--pink-neon);
+  background: #fff;
   border-radius: 50%;
   padding: 2rem;
   transition: 1.2s ease;
+  color: var(--pink-neon);
+  text-shadow: none;
 }
 
 #purpose-section article.vert-card > i:hover {
@@ -432,8 +434,8 @@ main {
   grid-auto-rows: auto;
   border: var(--golden-orange-border);
   width: 90vw;
-  place-items: center;
 }
+
 .tech img {
   border-radius: 50%;
   width: 100%;
@@ -444,11 +446,96 @@ main {
   font-size: 1.5rem;
 }
 
-.tech .icons {
-  grid-area: 2/1/3/2;
-  font-size: 4rem;
-}
-
 .tech .company {
   grid-area: 3/2/2/4;
+  place-self: center;
+}
+
+.icons {
+  grid-area: 2/1/3/2;
+  font-size: 4rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 25%);
+  gap: 20px 0px;
+  place-items: center;
+}
+
+.icons .fa-html5 {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-html5:hover {
+  transform: scale(1.2);
+  color: #f06529;
+  text-shadow: none;
+}
+
+.icons .fa-css3 {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-css3:hover {
+  transform: scale(1.2);
+  color: #2965f1;
+  text-shadow: none;
+}
+
+.icons .fa-js {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-js:hover {
+  transform: scale(1.2);
+  color: #f7df1e;
+  text-shadow: none;
+}
+
+.icons .fa-react {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-react:hover {
+  transform: scale(1.2);
+  color: #00d8ff;
+  text-shadow: none;
+}
+
+.icons .fa-bootstrap {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-bootstrap:hover {
+  transform: scale(1.2);
+  color: #563d7c;
+  text-shadow: none;
+}
+
+.icons .fa-vuejs {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-vuejs:hover {
+  transform: scale(1.2);
+  color: #42b883;
+  text-shadow: none;
+}
+
+.icons .fa-docker {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-docker:hover {
+  transform: scale(1.2);
+  color: #0db7ed;
+  text-shadow: none;
+}
+
+.icons .fa-node {
+  transition: 0.2s ease-in;
+}
+
+.icons .fa-node:hover {
+  transform: scale(1.2);
+  color: #6cc24a;
+  text-shadow: none;
 }
