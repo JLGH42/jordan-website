@@ -403,6 +403,10 @@ main {
   text-shadow: none;
 }
 
+#purpose-section article.vert-card > p {
+  line-height: 1.5;
+}
+
 #purpose-section article.vert-card > i:hover {
   transform: rotateZ(720deg);
 }
