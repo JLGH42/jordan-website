@@ -638,3 +638,43 @@ main {
 .fade-in.appear {
   opacity: 1;
 }
+
+.slide-left {
+  transform: translateX(50%);
+}
+
+.slide-up {
+  transform: translateY(-50%);
+}
+
+.slide-right {
+  transform: translateX(-50%);
+}
+
+.icons.slide-right {
+  transform: translateX(-25%);
+}
+
+#purpose-section .vert-card.fade-in:nth-child(1) {
+  transition-delay: 0s;
+}
+
+#purpose-section .vert-card.fade-in:nth-child(2) {
+  transition-delay: .5s;
+}
+
+#purpose-section .vert-card.fade-in:nth-child(3) {
+  transition-delay: .8s;
+}
+
+.slide-left,
+.slide-right,
+.slide-up {
+  transition: transform 0.5s ease-in;
+}
+
+.slide-left.appear,
+.slide-right.appear,
+.slide-up.appear {
+  transform: translateX(0);
+}
