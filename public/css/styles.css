@@ -14,6 +14,10 @@
   --golden-orange-border: 2px solid var(--golden-orange);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -565,6 +569,23 @@ main {
   color: #000;
 }
 
+#footer #top-arrow {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 2.5rem;
+}
+
+#footer #top-arrow~label {
+  opacity: 0;
+  font-size: .8rem;
+  transition: .7s ease;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#footer #top-arrow:hover + label {
+  opacity: 1;
+}
+
 .heart {
   margin: 2rem 0;
   text-align: center;
@@ -660,11 +681,11 @@ main {
 }
 
 #purpose-section .vert-card.fade-in:nth-child(2) {
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 
 #purpose-section .vert-card.fade-in:nth-child(3) {
-  transition-delay: .8s;
+  transition-delay: 0.8s;
 }
 
 .slide-left,
