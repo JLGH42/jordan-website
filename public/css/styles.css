@@ -574,10 +574,10 @@ main {
   font-size: 2.5rem;
 }
 
-#footer #top-arrow~label {
+#footer #top-arrow ~ label {
   opacity: 0;
-  font-size: .8rem;
-  transition: .7s ease;
+  font-size: 0.8rem;
+  transition: 0.7s ease;
   padding: 1rem;
   color: rgba(0, 0, 0, 0.65);
 }
@@ -698,4 +698,133 @@ main {
 .slide-right.appear,
 .slide-up.appear {
   transform: translateX(0);
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  /* fixes width of screen */
+  html,
+  body {
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+  .hero-container .static-text {
+    font-size: 40px;
+  }
+
+  .hero-container .dynamic-text li {
+    font-size: 40px;
+  }
+
+  .container h1 {
+    font-size: 2.5em;
+  }
+
+  .container .content {
+    padding: 0 2rem;
+  }
+
+  .container .tl-dr.grid-container {
+    margin-top: 1.5rem;
+    min-width: 90%;
+    padding: 1rem;
+  }
+
+  .parallax-section {
+    margin: 20vh;
+  }
+
+  #purpose-section h1 {
+    font-size: 2em;
+  }
+
+  #purpose-section .vert-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tech.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+  }
+
+  .icons {
+    border: none;
+  }
+
+  .icons .fa-html5 {
+    color: #f06529;
+    text-shadow: none;
+  }
+
+  .icons .fa-css3 {
+    color: #2965f1;
+    text-shadow: none;
+  }
+
+  .icons .fa-js {
+    color: #f7df1e;
+    text-shadow: none;
+  }
+
+  .icons .fa-react {
+    color: #00d8ff;
+    text-shadow: none;
+  }
+
+  .icons .fa-bootstrap {
+    color: #563d7c;
+    text-shadow: none;
+  }
+
+  .icons .fa-vuejs {
+    color: #42b883;
+    text-shadow: none;
+  }
+
+  .icons .fa-docker {
+    color: #0db7ed;
+    text-shadow: none;
+  }
+
+  .icons .fa-node {
+    color: #6cc24a;
+    text-shadow: none;
+  }
+
+  .icons.slide-right {
+    border: none;
+    transition-delay: 0.5s;
+  }
+
+  .heart i {
+    animation: heartbeat 1.5s infinite;
+    color: rgba(240, 240, 240, 0.6);
+    text-shadow: 10px 10px 10px var(--pink-neon),
+      10px 10px 10px var(--pink-neon);
+  }
+
+  .social-links > a i.fa-linkedin-in {
+    background: rgba(10, 102, 194, 0.7);
+  }
+
+  .social-links > a i.fa-github {
+    background: #4078c0;
+  }
+
+  .social-links > a i.fa-youtube {
+    background: #ff0000;
+  }
+
+  .fa-bounce {
+    animation: none;
+  }
+
+  #footer.slide-up {
+    transform: translateX(0);
+  }
+
+  #footer #top-arrow ~ label {
+    opacity: 1;
+  }
 }
