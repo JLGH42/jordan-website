@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <script defer src="/index.js"></script>
+    <script defer src="/observer.js"></script>
+    <title>JordanLyn2023</title>
+  </head>
+  <body>
+    <header class="main-header grid-container">
+      <div class="logo"><a href="#parallax-banner">JL</a></div>
+      <nav>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#profile-section">Profile</a></li>
+          <li><a href="#purpose-section">Purpose</a></li>
+          <li><a href="#experience-section">Experience</a></li>
+          <li><a href="#footer">Social</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileEvent(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="#top">Home</a></li>
+          <hr />
+          <li><a href="#profile-section">Profile</a></li>
+          <hr />
+          <li><a href="#purpose-section">Purpose</a></li>
+          <hr />
+          <li><a href="#experience-section">Experience</a></li>
+          <hr />
+          <li><a href="#footer">Social</a></li>
+          <hr />
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div id="top" class="parallax-banner">
+        <div class="hero-overlay">
+          <div class="hero-container">
+            <div class="static-text">I am</div>
+            <ul class="dynamic-text">
+              <li><span>Jordan Lyn</span></li>
+              <li><span>Self-Taught</span></li>
+              <li><span>The Future</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="container" id="profile-section">
+        <h1 class="fade-in">a little bit about me</h1>
+        <div class="profile-wrapper fade-in">
+          <img class="profile-image" src="/images/me.jpg" alt="" />
+        </div>
+        <div class="content">
+          <p class="fade-in">
+            Hi! My name is Jordan Lyn, I'm a self-taught developer from
+            Plaistow, London with a strong passion for web development. I'm
+            working part-time as a security officer and self-studying using
+            resources such as YouTube, Udemy, and information sites such as MDN
+            and Medium Blog posts. I aspire to be a leader in this field with a
+            set of varied unparalleled skills which I think is what it takes to
+            become a fully-fledged developer.
+          </p>
+          <p class="fade-in">
+            When I'm away from my keyboard I enjoy going to the gym, learning
+            about animals and playing video games (not so AFK after all).
+          </p>
+        </div>
+        <div class="tl-dr grid-container fade-in">
+          <h3>TL;DR: Self Manifesto</h3>
+          <div class="tldr-man-1">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h5>gym</h5>
+          </div>
+          <div class="tldr-man-2">
+            <i class="fa-solid fa-gamepad"></i>
+            <h5>gaming</h5>
+          </div>
+          <div class="tldr-man-3">
+            <i class="fa-solid fa-paw"></i>
+            <h5>animals</h5>
+          </div>
+        </div>
+      </section>
+      <section class="parallax-section fade-in">
+        <h1></h1>
+      </section>
+      <section id="purpose-section">
+        <h1 class="fade-in">why i want to join the program</h1>
+        <div class="vert-cards grid-container">
+          <article class="vert-card fade-in">
+            <i class="fa fa-solid fa-network-wired"></i>
+            <h3>structure</h3>
+            <p>
+              Being self-taught is fun because you tend to focus on the things
+              that “just work”, I sometimes overlook the underlying reasons for
+              why something works which tends to become a bump in the road later
+              on down the line (immutability in React -.-). <br /><br />
+              With structured learning, these overlooked aspects of programming
+              are factored in, in some cases, I'm not fully aware of these
+              topics which results in longer debugging sessions and having to
+              perform extensive research on internet to find the answer to my
+              dilemma(s). Having a structured curriculum and working on real
+              issues also creates a stronger sense of urgency as there are set
+              deadlines that have an impact. In contrast, being self-taught, you
+              can offset certain tasks you have extreme difficulty with, with
+              more manageable tasks.
+            </p>
+          </article>
+          <article class="vert-card fade-in">
+            <i class="fa fa-solid fa-people-group"></i>
+            <h3>learn, experience, earn</h3>
+            <p>
+              Working another job and studying at the same time can be
+              exhausting both mentally and physically, however, with an
+              apprenticeship I get the best of both worlds with a focus on
+              practical application for a real company.
+              <br /><br />
+              Learning as mentioned before is more structured which points you
+              in the right direction, applying what you've learned to real-world
+              applications makes the experience feel much more tangible. You're
+              no longer a chicken, you're now a pig who has to commit themselves
+              to ensure the best possible outcomes for the company you work for.
+              Earning enhances this tangible feeling because it puts value on
+              the work you produce, it feels much better than pretending to fix
+              a real-world issue.
+              <br /><br />
+              This, in my opinion, is a good way gain recognition too: offering
+              a network; being awarded a certificate upon completion; 1 to 1's
+              with those who have more experience than you is always a plus.
+            </p>
+          </article>
+          <article class="vert-card fade-in">
+            <i class="fa-solid fa-hand-spock"></i>
+            <h3>future</h3>
+            <p>
+              My aspirations as a developer are to help build the world of
+              tomorrow, whether it's improving the visual appetite of the
+              average user or inventing/integrating something as grand as
+              improving the accessibility of technology/software for people
+              around the world, I want to use my skills and intuition to improve
+              the state of the world - the next generation as well as my own. I
+              believe getting into the Software Foundation (and eventually an
+              apprenticeship) is the stepping stone to my dream of becoming a
+              part of the new world of technology with its accelerated growth.
+              <br /><br />As a Web Developer I will be handling a big part of
+              the media which comes with a level of responsibility to ensure the
+              highest standards of visual interfaces and user experiences, I
+              believe I will gain the necessary skills to achieve my dream by
+              joining the Founders and Coders program.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="parallax-section fade-in">
+        <h1></h1>
+      </section>
+      <section id="experience-section" class="container">
+        <h1 class="fade-in">what i've worked with so far</h1>
+        <div class="content fade-in">
+          <p>
+            My commercial coding experience is 1 year and 6 months however I've
+            been practicing for 3 years. I use mainly Javascript as I started
+            off learning about NodeJS and VueJS, but recently I have been
+            focusing on ReactJS as a client library; I'm always excited to learn
+            new tech stacks!
+          </p>
+        </div>
+        <div class="tech grid-container fade-in">
+          <h2>Technologies I've worked with before:</h2>
+          <div class="icons grid-container fade-in slide-in slide-right">
+            <i class="fa fa-brands fa-html5"></i>
+            <i class="fa fa-brands fa-css3"></i>
+            <i class="fa fa-brands fa-js"></i>
+            <i class="fa fa-brands fa-react"></i>
+            <i class="fa fa-brands fa-bootstrap"></i>
+            <i class="fa fa-brands fa-vuejs"></i>
+            <i class="fa fa-brands fa-docker"></i>
+            <i class="fa fa-brands fa-node"></i>
+          </div>
+          <h2>Companies I've worked at:</h2>
+          <div class="company slide-in slide-left">
+            <img src="images/winebuyers-logo.jpeg" alt="winebuyers logo" />
+          </div>
+        </div>
+      </section>
+      <section class="container slide-in slide-up fade-in" id="footer">
+        <div class="thank-you">
+          <h1>thank's for viewing!</h1>
+          <div class="heart">
+            <i class="fa fa-solid fa-heart"></i>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jordan-lyn/">
+            <i class="fa fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/@jordanlyn9427/">
+            <i class="fa fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://github.com/JLGH42">
+            <i class="fa fa-brands fa-github"></i>
+          </a>
+        </div>
+        <a href="#top" id="top-arrow"
+          ><i class="fa fa-solid fa-plane-up fa-bounce"></i
+        ></a>
+        <label for="top-arrow">up up and away baby!</label>
+        <div class="copyright">
+          <span
+            >Created by:
+            <i class="fa fa-regular fa-copyright"></i>JordanLyn2023</span
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
