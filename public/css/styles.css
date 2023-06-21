@@ -26,6 +26,7 @@ body {
   text-shadow: 1px 1px 10px #679e61;
   font-family: "Space Grotesk", sans-serif;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .grid-container {
@@ -58,13 +59,32 @@ body {
   font-size: 2rem;
   place-items: center;
   transform: rotateY(45deg);
-  animation: rotateAnimation 3s linear infinite;
   transition: 0.6s;
+  animation: rotateAnimation 3s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .logo a {
   text-decoration: none;
   color: #fff;
+}
+
+.main-header {
+  grid-template-columns: 2fr 2fr;
+  grid-auto-rows: auto;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 0.6rem;
+  transition: 0.6s;
 }
 
 .main-header.sticky .logo {
@@ -91,25 +111,6 @@ body {
 .main-header.sticky .logo a.golden-orange {
   color: var(--golden-orange);
   text-shadow: 1px 1px 10px var(--golden-orange);
-}
-
-@keyframes rotateAnimation {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-.main-header {
-  grid-template-columns: 2fr 2fr;
-  grid-auto-rows: auto;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  padding: 0.6rem;
-  transition: 0.6s;
 }
 
 .main-header.sticky {
