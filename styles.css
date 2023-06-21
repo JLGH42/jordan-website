@@ -180,7 +180,7 @@ main {
 
 .parallax-banner {
   display: block;
-  background: url("/images/hero-background.jpeg");
+  background: url("images/hero-background.jpeg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -372,7 +372,7 @@ main {
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
-  background-image: url("/images/parallax.jpg");
+  background-image: url("images/parallax.jpg");
   background-position: center;
   background-size: cover;
   min-height: 50vh;
@@ -439,7 +439,7 @@ main {
 }
 
 .parallax-section ~ .parallax-section {
-  background-image: url("/images/parallax-3.jpg");
+  background-image: url("images/parallax-3.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
