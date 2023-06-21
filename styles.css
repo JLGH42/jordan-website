@@ -755,22 +755,29 @@ main {
   width: 96%;
 }
 
+.main-header.sticky ul {
+  background: rgba(90, 85, 85, 0.9);
+}
+
 .mobile-menu {
   display: none;
   position: absolute;
-  margin: 0 25%;
+  margin: 0;
   padding: 0;
-  top: 0;
+  top: 79px;
   left: 0;
   height: fit-content;
-  background: rgba(90, 85, 85, 0.75);
+  background: rgba(90, 85, 85, 0.1);
   border-radius: 0 0 7% 7%;
-  width: 50%;
+  width: 100%;
   transition: 0.5s ease;
+  z-index: 1;
 }
 
 .mobile-menu li {
-  padding-bottom: 3px;
+  padding: 12px;
+  width: 100%;
+  text-align: center;
 }
 
 .mobile-menu li:active {
@@ -794,6 +801,10 @@ main {
 
   header nav {
     display: none;
+  }
+
+  .main-header.sticky .logo {
+    z-index: 0;
   }
 
   #hamburger-icon {
