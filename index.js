@@ -47,6 +47,10 @@ const experienceSectionColourChange = function () {
   }
 };
 
-window.addEventListener("scroll", stickyNavBar);
-window.addEventListener("scroll", passionSectionColourChange);
-window.addEventListener("scroll", experienceSectionColourChange);
+if (typeof window !== "undefined") {
+  window.addEventListener("scroll", stickyNavBar);
+  window.addEventListener("scroll", passionSectionColourChange);
+  window.addEventListener("scroll", experienceSectionColourChange);
+} else {
+  console.log("Go to browser");
+}
