@@ -755,10 +755,6 @@ main {
   width: 96%;
 }
 
-.main-header.sticky ul {
-  background: rgba(90, 85, 85, 0.9);
-}
-
 .mobile-menu {
   display: none;
   position: absolute;
@@ -797,6 +793,10 @@ main {
 
   .main-header.sticky {
     width: 99%;
+  }
+
+  .main-header.sticky ul {
+    background: rgba(90, 85, 85, 0.9);
   }
 
   header nav {
