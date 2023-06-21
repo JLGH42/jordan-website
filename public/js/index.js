@@ -3,10 +3,9 @@ const stickyNavBar = function () {
   header.classList.toggle("sticky", window.scrollY > 0);
 };
 
-const hamburgerClick = function () {
-  const hamburgerIcon = document.querySelector("#hamburger-icon");
-  hamburgerIcon.classList.toggle("open");
-};
+function toggleMobileEvent(menu) {
+  menu.classList.toggle("open");
+}
 
 const passionSectionColourChange = function () {
   const parallaxSection = document.querySelector(".parallax-section");
@@ -49,6 +48,5 @@ const experienceSectionColourChange = function () {
 };
 
 window.addEventListener("scroll", stickyNavBar);
-window.addEventListener("click", hamburgerClick);
 window.addEventListener("scroll", passionSectionColourChange);
 window.addEventListener("scroll", experienceSectionColourChange);
