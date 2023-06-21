@@ -1,9 +1,6 @@
-/* fonts */
 @import url("https://fonts.cdnfonts.com/css/cherry-blossom");
 @import url("https://fonts.cdnfonts.com/css/space-grotesk");
 @import url("https://fonts.cdnfonts.com/css/rubik-puddles");
-
-/* responsive styles */
 
 :root {
   --green: rgb(105, 204, 51);
@@ -14,8 +11,10 @@
   --golden-orange-border: 2px solid var(--golden-orange);
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,7 +25,6 @@ body {
   text-shadow: 1px 1px 10px #679e61;
   font-family: "Space Grotesk", sans-serif;
   height: 100%;
-  overflow-x: hidden;
 }
 
 .grid-container {
@@ -46,6 +44,19 @@ body {
   border-radius: 4px;
   padding: 0.5rem;
   font-size: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0 20px;
+  color: #fff;
+  height: auto;
+}
+
+header a {
+  text-decoration: none;
 }
 
 .logo {
@@ -77,12 +88,28 @@ body {
   color: #fff;
 }
 
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+header ul a {
+  color: #fff;
+}
+
+header ul a:active {
+  background: var(--green);
+}
+
 .main-header {
   grid-template-columns: 2fr 2fr;
   grid-auto-rows: auto;
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   padding: 0.6rem;
   transition: 0.6s;
 }
@@ -116,44 +143,6 @@ body {
 .main-header.sticky {
   background: rgba(0, 0, 0, 0.95);
   padding: 0.3rem;
-}
-
-.main-header.sticky .navigation a {
-  color: var(--green);
-}
-
-.main-header.sticky .navigation a.pink-neon {
-  color: var(--pink-neon);
-}
-
-.main-header.sticky .navigation a.golden-orange {
-  color: var(--golden-orange);
-}
-
-.main-header.sticky .navigation a:hover {
-  color: #fff;
-}
-
-nav.navigation {
-  place-self: center;
-  padding: 0.6rem;
-}
-
-nav.navigation a {
-  color: #fff;
-  text-decoration: none;
-  margin: 1rem;
-  font-size: 1.1rem;
-  transition: 1s;
-}
-
-nav.navigation a:hover {
-  color: var(--green);
-  width: 100%;
-}
-
-nav.navigation > a.pink-neon {
-  color: var(--pink-neon);
 }
 
 main {
@@ -701,14 +690,94 @@ main {
   transform: translateX(0);
 }
 
-/* mobile */
-@media screen and (max-width: 480px) {
-  /* fixes width of screen */
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  flex-direction: column;
+  justify-self: end;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background: #fff;
+  margin: 6px 6px;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.open .mobile-menu hr {
+  width: 100%;
+}
+
+.open .mobile-menu hr:last-child() {
+  width: 96%;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  margin: 0 25%;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  background: rgba(90, 85, 85, 0.75);
+  border-radius: 0 0 7% 7%;
+  width: 50%;
+  transition: 0.5s ease;
+}
+
+.mobile-menu li {
+  padding-bottom: 3px;
+}
+
+.mobile-menu li:active {
+  background-color: rgba(90, 85, 85, 0.75);
+}
+
+@media screen and (max-width: 900px) {
   html,
   body {
     overflow-x: hidden;
     font-size: 14px;
   }
+
+  .main-header {
+    width: 99%;
+  }
+
+  .main-header.sticky {
+    width: 99%;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+
   .hero-container .static-text {
     font-size: 40px;
   }
