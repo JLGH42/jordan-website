@@ -9,16 +9,16 @@ function toggleMobileEvent(menu) {
 
 const passionSectionColourChange = function () {
   const parallaxSection = document.querySelector(".parallax-section");
-  const nav = document.querySelectorAll(".main-header.sticky .navigation a");
+  const navItems = document.querySelectorAll(".main-header.sticky nav ul a");
   const logo = document.querySelector(".logo a");
 
   if (parallaxSection.getBoundingClientRect().top < 155) {
-    nav.forEach((item) => {
+    navItems.forEach((item) => {
       item.classList.add("pink-neon");
     });
     logo.classList.add("pink-neon");
   } else {
-    nav.forEach((item) => {
+    navItems.forEach((item) => {
       item.classList.remove("pink-neon");
     });
     logo.classList.remove("pink-neon");
@@ -29,18 +29,18 @@ const experienceSectionColourChange = function () {
   const parallaxSection = document.querySelector(
     ".parallax-section~.parallax-section"
   );
-  const nav = document.querySelectorAll(".main-header.sticky .navigation a");
+  const navItems = document.querySelectorAll(".main-header.sticky nav ul a");
   const logo = document.querySelector(".logo a");
 
   if (parallaxSection.getBoundingClientRect().top < 155) {
-    nav.forEach((item) => {
+    navItems.forEach((item) => {
       item.classList.remove("pink-neon");
       item.classList.add("golden-orange");
     });
     logo.classList.remove("pink-neon");
     logo.classList.add("golden-orange");
   } else {
-    nav.forEach((item) => {
+    navItems.forEach((item) => {
       item.classList.remove("golden-orange");
     });
     logo.classList.remove("golden-orange");

@@ -100,8 +100,30 @@ header ul a {
   color: #fff;
 }
 
-header ul a:active {
-  background: var(--green);
+header ul a:hover {
+  color: var(--green);
+  text-shadow: 1px 1px 10px var(--green);
+}
+
+.main-header.sticky ul a:hover {
+  color: var(--green);
+  text-shadow: 1px 1px 10px var(--green);
+}
+
+.main-header.sticky nav ul a.pink-neon {
+  text-shadow: 1px 1px 10px var(--pink-neon);
+}
+
+.main-header.sticky nav ul a.pink-neon:hover {
+  color: var(--pink-neon);
+}
+
+.main-header.sticky ul a.golden-orange {
+  text-shadow: 1px 1px 10px var(--golden-orange);
+}
+
+.main-header.sticky ul a.golden-orange:hover {
+  color: var(--golden-orange);
 }
 
 .main-header {
